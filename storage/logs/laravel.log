@@ -1,0 +1,277 @@
+[2022-08-20 06:23:34] production.ERROR: Trying to access array offset on value of type int {"exception":"[object] (ErrorException(code: 0): Trying to access array offset on value of type int at /var/www/html/vendor/symfony/console/Input/ArrayInput.php:135)
+[stacktrace]
+#0 /var/www/html/vendor/symfony/console/Input/ArrayInput.php(135): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Trying to acces...', '/var/www/html/v...', 135, Array)
+#1 /var/www/html/vendor/symfony/console/Input/Input.php(55): Symfony\\Component\\Console\\Input\\ArrayInput->parse()
+#2 /var/www/html/vendor/symfony/console/Application.php(204): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#3 /var/www/html/vendor/symfony/console/Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\BufferedOutput))
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\BufferedOutput))
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Application.php(188): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\BufferedOutput))
+#6 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(250): Illuminate\\Console\\Application->call('key:generate', Array, NULL)
+#7 /var/www/html/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(237): Illuminate\\Foundation\\Console\\Kernel->call('key:generate', Array)
+#8 /var/www/html/packages/installer/src/Http/Controllers/InstallerController.php(34): Illuminate\\Support\\Facades\\Facade::__callStatic('call', Array)
+#9 [internal function]: Packages\\Installer\\Http\\Controllers\\InstallerController->__construct(Object(Illuminate\\Http\\Request))
+#10 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(812): ReflectionClass->newInstanceArgs(Array)
+#11 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(658): Illuminate\\Container\\Container->build('Packages\\\\Instal...')
+#12 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(609): Illuminate\\Container\\Container->resolve('Packages\\\\Instal...', Array)
+#13 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(759): Illuminate\\Container\\Container->make('Packages\\\\Instal...', Array)
+#14 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(233): Illuminate\\Foundation\\Application->make('Packages\\\\Instal...')
+#15 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(833): Illuminate\\Routing\\Route->getController()
+#16 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(794): Illuminate\\Routing\\Route->controllerMiddleware()
+#17 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(695): Illuminate\\Routing\\Route->gatherMiddleware()
+#18 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(675): Illuminate\\Routing\\Router->gatherRouteMiddleware(Object(Illuminate\\Routing\\Route))
+#19 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(659): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#20 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(625): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#21 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(614): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#22 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#23 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/html/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#38 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#39 /var/www/html/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#40 {main}
+"} 
+[2022-08-20 06:24:45] production.ERROR: Trying to access array offset on value of type int {"exception":"[object] (ErrorException(code: 0): Trying to access array offset on value of type int at /var/www/html/vendor/symfony/console/Input/ArrayInput.php:135)
+[stacktrace]
+#0 /var/www/html/vendor/symfony/console/Input/ArrayInput.php(135): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Trying to acces...', '/var/www/html/v...', 135, Array)
+#1 /var/www/html/vendor/symfony/console/Input/Input.php(55): Symfony\\Component\\Console\\Input\\ArrayInput->parse()
+#2 /var/www/html/vendor/symfony/console/Application.php(204): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#3 /var/www/html/vendor/symfony/console/Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\BufferedOutput))
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\BufferedOutput))
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Application.php(188): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\BufferedOutput))
+#6 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(250): Illuminate\\Console\\Application->call('key:generate', Array, NULL)
+#7 /var/www/html/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(237): Illuminate\\Foundation\\Console\\Kernel->call('key:generate', Array)
+#8 /var/www/html/packages/installer/src/Http/Controllers/InstallerController.php(34): Illuminate\\Support\\Facades\\Facade::__callStatic('call', Array)
+#9 [internal function]: Packages\\Installer\\Http\\Controllers\\InstallerController->__construct(Object(Illuminate\\Http\\Request))
+#10 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(812): ReflectionClass->newInstanceArgs(Array)
+#11 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(658): Illuminate\\Container\\Container->build('Packages\\\\Instal...')
+#12 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(609): Illuminate\\Container\\Container->resolve('Packages\\\\Instal...', Array)
+#13 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(759): Illuminate\\Container\\Container->make('Packages\\\\Instal...', Array)
+#14 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(233): Illuminate\\Foundation\\Application->make('Packages\\\\Instal...')
+#15 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(833): Illuminate\\Routing\\Route->getController()
+#16 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(794): Illuminate\\Routing\\Route->controllerMiddleware()
+#17 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(695): Illuminate\\Routing\\Route->gatherMiddleware()
+#18 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(675): Illuminate\\Routing\\Router->gatherRouteMiddleware(Object(Illuminate\\Routing\\Route))
+#19 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(659): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#20 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(625): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#21 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(614): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#22 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#23 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/html/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#38 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#39 /var/www/html/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#40 {main}
+"} 
+[2022-08-20 06:25:55] production.ERROR: Trying to access array offset on value of type int {"exception":"[object] (ErrorException(code: 0): Trying to access array offset on value of type int at /var/www/html/vendor/symfony/console/Input/ArrayInput.php:136)
+[stacktrace]
+#0 /var/www/html/vendor/symfony/console/Input/ArrayInput.php(136): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Trying to acces...', '/var/www/html/v...', 136, Array)
+#1 /var/www/html/vendor/symfony/console/Input/Input.php(55): Symfony\\Component\\Console\\Input\\ArrayInput->parse()
+#2 /var/www/html/vendor/symfony/console/Application.php(204): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#3 /var/www/html/vendor/symfony/console/Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\BufferedOutput))
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\BufferedOutput))
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Application.php(188): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\BufferedOutput))
+#6 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(250): Illuminate\\Console\\Application->call('key:generate', Array, NULL)
+#7 /var/www/html/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(237): Illuminate\\Foundation\\Console\\Kernel->call('key:generate', Array)
+#8 /var/www/html/packages/installer/src/Http/Controllers/InstallerController.php(34): Illuminate\\Support\\Facades\\Facade::__callStatic('call', Array)
+#9 [internal function]: Packages\\Installer\\Http\\Controllers\\InstallerController->__construct(Object(Illuminate\\Http\\Request))
+#10 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(812): ReflectionClass->newInstanceArgs(Array)
+#11 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(658): Illuminate\\Container\\Container->build('Packages\\\\Instal...')
+#12 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(609): Illuminate\\Container\\Container->resolve('Packages\\\\Instal...', Array)
+#13 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(759): Illuminate\\Container\\Container->make('Packages\\\\Instal...', Array)
+#14 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(233): Illuminate\\Foundation\\Application->make('Packages\\\\Instal...')
+#15 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(833): Illuminate\\Routing\\Route->getController()
+#16 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(794): Illuminate\\Routing\\Route->controllerMiddleware()
+#17 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(695): Illuminate\\Routing\\Route->gatherMiddleware()
+#18 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(675): Illuminate\\Routing\\Router->gatherRouteMiddleware(Object(Illuminate\\Routing\\Route))
+#19 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(659): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#20 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(625): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#21 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(614): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#22 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#23 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/html/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#38 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#39 /var/www/html/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#40 {main}
+"} 
+[2022-08-20 06:28:28] production.ERROR: Undefined variable: result {"exception":"[object] (ErrorException(code: 0): Undefined variable: result at /var/www/html/packages/installer/src/Http/Controllers/InstallerController.php:82)
+[stacktrace]
+#0 /var/www/html/packages/installer/src/Http/Controllers/InstallerController.php(82): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined varia...', '/var/www/html/p...', 82, Array)
+#1 [internal function]: Packages\\Installer\\Http\\Controllers\\InstallerController->step1(Object(Illuminate\\Http\\Request), '1')
+#2 /var/www/html/packages/installer/src/Http/Controllers/InstallerController.php(66): call_user_func_array(Array, Array)
+#3 [internal function]: Packages\\Installer\\Http\\Controllers\\InstallerController->process(Object(Illuminate\\Http\\Request), '1')
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('process', Array)
+#6 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Packages\\Installer\\Http\\Controllers\\InstallerController), 'process')
+#7 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(176): Illuminate\\Routing\\Route->runController()
+#8 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(682): Illuminate\\Routing\\Route->run()
+#9 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 /var/www/html/packages/installer/src/Http/Middleware/RedirectIfInstalled.php(23): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#11 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Packages\\Installer\\Http\\Middleware\\RedirectIfInstalled->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#12 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /var/www/html/app/Http/Middleware/Locale.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#14 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): App\\Http\\Middleware\\Locale->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /var/www/html/app/Http/Middleware/CheckForMaintenanceMode.php(38): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): App\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(75): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /var/www/html/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(66): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /var/www/html/app/Http/Middleware/EncryptCookies.php(25): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): App\\Http\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(684): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#40 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(659): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#41 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(625): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#42 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(614): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#43 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#44 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/html/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#49 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#55 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#58 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#59 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#60 /var/www/html/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#61 {main}
+"} 
+[2022-08-20 06:28:57] production.DEBUG: SHOW FULL TABLES WHERE table_type = 'BASE TABLE' {"params":[],"time":2.3799999999999999} 
+[2022-08-20 06:28:57] production.DEBUG: SET FOREIGN_KEY_CHECKS=0; {"params":[],"time":0.13} 
+[2022-08-20 06:28:57] production.DEBUG: drop table `account_transactions`,`accounts`,`bonuses`,`chat_messages`,`commands`,`credits`,`debits`,`game_slots`,`games`,`migrations`,`password_resets`,`social_profiles`,`users` {"params":[],"time":49.899999999999999} 
+[2022-08-20 06:28:57] production.DEBUG: SET FOREIGN_KEY_CHECKS=1; {"params":[],"time":0.53000000000000003} 
+[2022-08-20 06:28:57] production.DEBUG: select * from information_schema.tables where table_schema = ? and table_name = ? {"params":["db","migrations"],"time":1.9099999999999999} 
+[2022-08-20 06:28:57] production.DEBUG: create table `migrations` (`id` int unsigned not null auto_increment primary key, `migration` varchar(255) not null, `batch` int not null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":8.5500000000000007} 
+[2022-08-20 06:28:57] production.DEBUG: select `migration` from `migrations` order by `batch` asc, `migration` asc {"params":[],"time":1.3100000000000001} 
+[2022-08-20 06:28:57] production.DEBUG: select max(`batch`) as aggregate from `migrations` {"params":[],"time":0.91000000000000003} 
+[2022-08-20 06:28:57] production.DEBUG: create table `users` (`id` int unsigned not null auto_increment primary key, `name` varchar(100) not null, `email` varchar(255) not null, `role` varchar(50) not null, `status` tinyint not null, `password` varchar(255) not null, `remember_token` varchar(100) null, `last_login_from` varchar(45) null, `last_login_at` datetime null, `email_verified_at` timestamp null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":8.5399999999999991} 
+[2022-08-20 06:28:57] production.DEBUG: alter table `users` add index `users_role_index`(`role`) {"params":[],"time":7.2999999999999998} 
+[2022-08-20 06:28:57] production.DEBUG: alter table `users` add index `users_status_index`(`status`) {"params":[],"time":6.5499999999999998} 
+[2022-08-20 06:28:57] production.DEBUG: alter table `users` add unique `users_name_unique`(`name`) {"params":[],"time":6.4299999999999997} 
+[2022-08-20 06:28:57] production.DEBUG: alter table `users` add unique `users_email_unique`(`email`) {"params":[],"time":7.0899999999999999} 
+[2022-08-20 06:28:57] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2014_10_12_000000_create_users_table",1],"time":0.75} 
+[2022-08-20 06:28:57] production.DEBUG: create table `password_resets` (`email` varchar(255) not null, `token` varchar(255) not null, `created_at` timestamp null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":10.970000000000001} 
+[2022-08-20 06:28:57] production.DEBUG: alter table `password_resets` add index `password_resets_email_index`(`email`) {"params":[],"time":6.5800000000000001} 
+[2022-08-20 06:28:57] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2014_10_12_100000_create_password_resets_table",1],"time":0.81000000000000005} 
+[2022-08-20 06:28:57] production.DEBUG: create table `accounts` (`id` int unsigned not null auto_increment primary key, `user_id` int unsigned not null, `code` varchar(50) not null, `balance` decimal(20, 2) not null default '0', `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":8.4900000000000002} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `accounts` add constraint `accounts_user_id_foreign` foreign key (`user_id`) references `users` (`id`) on delete cascade on update cascade {"params":[],"time":23.98} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `accounts` add unique `accounts_code_unique`(`code`) {"params":[],"time":8.1999999999999993} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2018_11_28_000000_create_accounts_table",1],"time":1.4199999999999999} 
+[2022-08-20 06:28:58] production.DEBUG: create table `account_transactions` (`id` int unsigned not null auto_increment primary key, `account_id` int unsigned not null, `amount` decimal(20, 2) not null, `balance` decimal(20, 2) not null, `transactionable_type` varchar(255) not null, `transactionable_id` bigint unsigned not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":9.4600000000000009} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `account_transactions` add index `account_transactions_morph`(`transactionable_type`, `transactionable_id`) {"params":[],"time":8.2400000000000002} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `account_transactions` add constraint `account_transactions_account_id_foreign` foreign key (`account_id`) references `accounts` (`id`) on delete cascade on update cascade {"params":[],"time":26.960000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2018_11_28_000001_create_account_transactions_table",1],"time":1.25} 
+[2022-08-20 06:28:58] production.DEBUG: create table `games` (`id` int unsigned not null auto_increment primary key, `account_id` int unsigned not null, `gameable_type` varchar(255) not null, `gameable_id` bigint unsigned not null, `bet` decimal(16, 2) not null, `win` decimal(16, 2) not null, `result` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":9.1500000000000004} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `games` add index `game_morph`(`gameable_type`, `gameable_id`) {"params":[],"time":9.6899999999999995} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `games` add constraint `games_account_id_foreign` foreign key (`account_id`) references `accounts` (`id`) on delete cascade on update cascade {"params":[],"time":28.829999999999998} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2018_11_29_000000_create_games_table",1],"time":1.5700000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: create table `game_slots` (`id` int unsigned not null auto_increment primary key, `lines_bet` int not null, `lines_win` int not null, `scatters_count` int not null, `reel_positions` varchar(50) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":9.7200000000000006} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2018_11_29_000001_create_game_slots_table",1],"time":1.1799999999999999} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `games` drop `result` {"params":[],"time":7} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_01_14_114519_alter_games_table_delete_result",1],"time":1.0900000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `games` add `status` tinyint not null after `win` {"params":[],"time":8.5299999999999994} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `games` add index `games_status_index`(`status`) {"params":[],"time":8.3499999999999996} 
+[2022-08-20 06:28:58] production.DEBUG: update `games` set `status` = ? {"params":[1],"time":1.0600000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_01_14_160000_alter_games_table_add_status",1],"time":1.1599999999999999} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `users` add `referrer_id` int unsigned null after `id` {"params":[],"time":6.5999999999999996} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `users` add constraint `users_referrer_id_foreign` foreign key (`referrer_id`) references `users` (`id`) on delete cascade on update cascade {"params":[],"time":34.57} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_02_18_101050_alter_users_table_add_referrer_id",1],"time":1.1000000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: create table `referral_bonuses` (`id` int unsigned not null auto_increment primary key, `user_id` int unsigned not null, `type` tinyint not null, `amount` decimal(20, 2) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":10.109999999999999} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `referral_bonuses` add constraint `referral_bonuses_user_id_foreign` foreign key (`user_id`) references `users` (`id`) on delete cascade on update cascade {"params":[],"time":28.57} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_02_18_131502_create_referral_bonuses_table",1],"time":1.1799999999999999} 
+[2022-08-20 06:28:58] production.DEBUG: create table `chat_messages` (`id` int unsigned not null auto_increment primary key, `user_id` int unsigned not null, `message` text not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":9.3300000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `chat_messages` add constraint `chat_messages_user_id_foreign` foreign key (`user_id`) references `users` (`id`) on delete cascade on update cascade {"params":[],"time":24.170000000000002} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_02_19_125624_create_chat_messages_table",1],"time":1.1799999999999999} 
+[2022-08-20 06:28:58] production.DEBUG: create table `debits` (`id` int unsigned not null auto_increment primary key, `account_id` int unsigned not null, `amount` decimal(20, 2) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":13.33} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `debits` add constraint `debits_account_id_foreign` foreign key (`account_id`) references `accounts` (`id`) on delete cascade on update cascade {"params":[],"time":27.420000000000002} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_03_05_072317_create_debits_table",1],"time":1.29} 
+[2022-08-20 06:28:58] production.DEBUG: create table `credits` (`id` int unsigned not null auto_increment primary key, `account_id` int unsigned not null, `amount` decimal(20, 2) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":11.869999999999999} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `credits` add constraint `credits_account_id_foreign` foreign key (`account_id`) references `accounts` (`id`) on delete cascade on update cascade {"params":[],"time":26.059999999999999} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_03_05_072644_create_credits_table",1],"time":1.0800000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `games` add `secret` varchar(300) not null after `status`, add `server_seed` varchar(32) not null after `secret`, add `client_seed` varchar(32) null after `server_seed` {"params":[],"time":5.9500000000000002} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_03_11_101041_alter_games_table_add_secret_seed",1],"time":1.03} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `game_slots` add `bet_amount` decimal(10, 2) not null after `lines_bet` {"params":[],"time":6.4299999999999997} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_03_13_142811_alter_game_slots_table_add_bet_amount",1],"time":1.0900000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `users` add `totp_secret` varchar(300) null after `remember_token` {"params":[],"time":6.2199999999999998} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_06_13_095842_alter_users_table_add2_f_a_secret",1],"time":0.82999999999999996} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `users` add `referee_sign_up_credits` int unsigned null after `totp_secret`, add `referrer_sign_up_credits` int unsigned null after `referee_sign_up_credits`, add `referrer_game_bet_pct` decimal(8, 2) unsigned null after `referrer_sign_up_credits`, add `referrer_deposit_pct` decimal(8, 2) unsigned null after `referrer_game_bet_pct` {"params":[],"time":7.79} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_07_16_070139_alter_users_table_add_referrer_fields",1],"time":1.0700000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: update `account_transactions` set `transactionable_type` = ?, `updated_at` = ? where `transactionable_type` = ? {"params":["App\\Models\\Bonus","2022-08-20 06:28:58","App\\Models\\ReferralBonus"],"time":1.8300000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `referral_bonuses` drop foreign key `referral_bonuses_user_id_foreign` {"params":[],"time":4.6600000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: rename table `referral_bonuses` to `bonuses` {"params":[],"time":4.5800000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `bonuses` add `account_id` int unsigned not null after `id` {"params":[],"time":5.2000000000000002} 
+[2022-08-20 06:28:58] production.DEBUG: select * from `bonuses` {"params":[],"time":0.85999999999999999} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `bonuses` drop `user_id` {"params":[],"time":6.5800000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `bonuses` add constraint `bonuses_account_id_foreign` foreign key (`account_id`) references `accounts` (`id`) on delete cascade on update cascade {"params":[],"time":20.870000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_09_18_150215_alter_referral_bonuses_table_add_account_id_foreign_key",1],"time":0.91000000000000003} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `users` add `referrer_game_loss_pct` decimal(8, 2) unsigned null after `referrer_sign_up_credits`, add `referrer_game_win_pct` decimal(8, 2) unsigned null after `referrer_game_loss_pct` {"params":[],"time":5.4400000000000004} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `users` drop `referrer_game_bet_pct` {"params":[],"time":5.7800000000000002} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_09_19_085844_alter_users_table_modify_referrer_fields",1],"time":0.91000000000000003} 
+[2022-08-20 06:28:58] production.DEBUG: create table `commands` (`id` int unsigned not null auto_increment primary key, `class` varchar(255) not null, `count` int unsigned not null default '1', `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":10.050000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `commands` add unique `commands_class_unique`(`class`) {"params":[],"time":9.4700000000000006} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_09_26_091033_create_commands_table",1],"time":0.83999999999999997} 
+[2022-08-20 06:28:58] production.DEBUG: create table `social_profiles` (`id` int unsigned not null auto_increment primary key, `user_id` int unsigned not null, `provider_name` varchar(50) not null, `provider_user_id` varchar(255) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_unicode_ci' engine = InnoDB {"params":[],"time":8.5099999999999998} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `social_profiles` add constraint `social_profiles_user_id_foreign` foreign key (`user_id`) references `users` (`id`) on delete cascade on update cascade {"params":[],"time":24.629999999999999} 
+[2022-08-20 06:28:58] production.DEBUG: alter table `social_profiles` add unique `social_profiles_provider_name_provider_user_id_unique`(`provider_name`, `provider_user_id`) {"params":[],"time":8.0800000000000001} 
+[2022-08-20 06:28:58] production.DEBUG: insert into `migrations` (`migration`, `batch`) values (?, ?) {"params":["2019_10_03_100000_create_social_profiles_table",1],"time":1.3400000000000001} 
+[2022-08-20 06:29:19] production.DEBUG: insert into `users` (`name`, `email`, `role`, `status`, `last_login_at`, `last_login_from`, `password`, `email_verified_at`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) {"params":["admin","admin@gmail.com","ADMIN",0,"2022-08-20 06:29:19","172.18.0.6","$2y$10$3WCuTdh7lvtzxeX9/XoY/OCMRbWpeENqs8tf3Sz1puXJxR6qg0Z7.","2022-08-20 06:29:19","2022-08-20 06:29:19","2022-08-20 06:29:19"],"time":3.4700000000000002} 
+[2022-08-20 06:29:19] production.DEBUG: insert into `accounts` (`user_id`, `code`, `updated_at`, `created_at`) values (?, ?, ?, ?) {"params":[1,"22a7481146702d3c77a3c9bc89e3fdaeb230bae8250dd4647b","2022-08-20 06:29:19","2022-08-20 06:29:19"],"time":0.29999999999999999} 
